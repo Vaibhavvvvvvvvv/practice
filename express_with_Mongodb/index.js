@@ -23,76 +23,77 @@ const User =  mongoose.model("User",userSchema)
 
 //CRUD
 
-// const user2 = new User({
-//      Name:"Siyush",
-//      Email:"siyush@gmail.com",
-//      age:24
-// })
-// user2.save()
-// .then((res)=>{
-//     console.log(res)
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
+const user2 = new User({
+     Name:"Siyush",
+     Email:"siyush@gmail.com",
+     age:24
+})
+user2.save()
+.then((res)=>{
+    console.log(res)
+})
+.catch((err)=>{
+    console.log(err)
+})
 
 
 //isert Many
-//  User.insertMany([
-//     {
-//         "Name": "Alice",
-//         "Email": "alice@example.com",
-//         "Age": 28
-//     },
-//     {
-//         "Name": "Bob",
-//         "Email": "bob@example.com",
-//         "Age": 32
-//     },
-//     {
-//         "Name": "Charlie",
-//         "Email": "charlie@example.com",
-//         "Age": 25
-//     },
-//     {
-//         "Name": "Diana",
-//         "Email": "diana@example.com",
-//         "Age": 30
-//     },
-//     {
-//         "Name": "Ethan",
-//         "Email": "ethan@example.com",
-//         "Age": 27
-//     }
-// ]) 
-// .then((res)=>{
-//     console.log(res)
-// })
-// .catch((err)=>console.log(err))
+ User.insertMany([
+    {
+        "Name": "Alice",
+        "Email": "alice@example.com",
+        "Age": 28
+    },
+    {
+        "Name": "Bob",
+        "Email": "bob@example.com",
+        "Age": 32
+    },
+    {
+        "Name": "Charlie",
+        "Email": "charlie@example.com",
+        "Age": 25
+    },
+    {
+        "Name": "Diana",
+        "Email": "diana@example.com",
+        "Age": 30
+    },
+    {
+        "Name": "Ethan",
+        "Email": "ethan@example.com",
+        "Age": 27
+    }
+]) 
+.then((res)=>{
+    console.log(res)
+})
+.catch((err)=>console.log(err))
 
 
 //Update
-// User.updateOne({ Name: 'Siyush' }, { $set: { Name: 'Nikhil' } })
-//     .then((res) => {
-//         console.log(res);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     });
+User.updateOne({ Name: 'Siyush' }, { $set: { Name: 'Nikhil' } })
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 
-// User.deleteOne({Name:'Nikhil'})
-// .then((res)=>{
-//     console.log(res)
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
+//Delete
+User.deleteOne({Name:'Nikhil'})
+.then((res)=>{
+    console.log(res)
+})
+.catch((err)=>{
+    console.log(err)
+})
 
 //Find
-// User.findById('6679791c6d656b7790d3fb4e')
-// .then((res)=>{
-//     console.log(res)
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
+User.findById('6679791c6d656b7790d3fb4e')
+.then((res)=>{
+    console.log(res)
+})
+.catch((err)=>{
+    console.log(err)
+})
